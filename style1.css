@@ -1,0 +1,163 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.partatas{
+  width: 1917px;
+  border-bottom: 3px solid black;
+  height: 140px;
+}
+img {
+margin-left: auto;
+margin-right: auto;
+display: block;
+width: 100px;
+background-color: transparent;
+}
+.header{
+  text-align: center;
+  font-family:  "Lucida Console", "Courier New", monospace; 
+  font-weight: 900;
+}
+.charbawah{
+  margin-left: 60px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#center{
+  font-weight: bold;
+  font-family: monospace;
+  margin-right: 200px;
+  margin-top: 200px;
+  position: absolute;
+  left: 47.6%;
+  border:5px solid black;
+  height: 50px;
+  box-shadow: 5px 10px;
+}
+#slideshow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.palingluar{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+   }
+.daleman2{
+  width: 800px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide.active {
+    opacity: 1;
+  }
+  .prev, .next {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 60px solid black;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: black;
+    border-radius: 20%;
+  }
+  .prev {
+    margin-left: 110px;
+    border: 60px solid black;
+    border-top-color: transparent;
+    border-right-color: black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  .next {
+    margin-bottom: 15px; 
+    margin-top: 20px;
+    margin-left: 500px;
+  }
+  .slide img{
+    width: 200px;
+  }
+
+  p{
+    text-align: center;
+    font-family:  "Lucida Console", "Courier New", monospace; 
+   font-weight: 900;
+  }
+  
+  #fname{
+    border: 5px solid black;
+    text-align: center;   /* Center Align */
+    height: 30px;
+    width: 200px;
+    background: white;
+    display: block;  /* Make Block type */
+    margin: auto;    /* Auto margin */
+  }
+  .boostbutton{
+
+    border:5px solid black;
+    height: 50px;
+    box-shadow: 5px 10px;
+    align-items: center;
+
+  }
+
+#main img{
+width: 800px;
+
+
+}
+#active img{
+width: 200%;
+}
+
+#kotakboost{
+}
+
+#playButton{
+  font-family: monospace;
+  font-weight: bold;
+}
+#bonusgame{
+  font-family: monospace;
+  font-weight: bold;
+}
+.boostbutton{
+  font-family: monospace;
+  font-weight: bold;
+}
+.mulai{
+  font-family: monospace;
+  font-weight: bold;
+}

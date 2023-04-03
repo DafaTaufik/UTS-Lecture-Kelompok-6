@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style1.css"><link rel="stylesheet" href="style2.css"> <link rel="stylesheet" href="stylegame.css">  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* customizable snowflake styling */
+      .snowflake {
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px #000;
+      }
+      @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+      </style>
+    <title>UMNGotcha | Exam</title>
+</head>
+
+<body>
+  <!-- Bagian SnowFlakes -->
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+  </div>
+  <!-- Bagian Penutup SnowFlakes -->
+
+  <div id="bonus">
+    <h1>Find Lion</h1>
+    <button type="button" class="mulai" onclick="mulai()">Mulai</button>
+    <h2 class="papan-skor">0</h2>
+    <div class="bungkus">
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+      <div class="batu">
+        <div class="lion"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div class="container" id ="page1">
+    <!-- Area atas -->
+    <div class="partatas">
+      <img src="ada.png">
+      <p class = "header" >UMN GOTCHA</p>
+    </div>
+    <!-- Area tengah -->
+  <div class="palingluar">
+    <button class="prev"></button>
+    <div id="slideshow">
+      <div class="daleman2">
+        <div class="slide" id="main">
+          <img src="sakit.png">
+        </div>
+        <button class="next"></button>
+      </div>
+    </div>
+  </div>
+  <!-- Area Bawah -->
+  <div class="charbawah">
+    <p id="page1">Enter pet name here...</p>
+    <input type="text" id="fname" name="fname"> <br><br>
+    <div class ="input" id="page1"></div>
+      <button id ="center" class ="button">PLAY</button>
+  </div>
+</div>
+
+<!-- Display Game 1  -->
+<div class="container-fluid1" id ="gamepage">
+  <!-- Kotak isi kucing dan star -->
+  <div class="arkiri">
+    <div class="kotak"> 
+      <div class="kucing"></div>
+      <div id="star"><img src="stars.png" ></div>
+    </div>
+  </div>
+  <!-- Tombol Controll -->
+    <div class="Atombol">
+      <div class="option" id="kiri">
+        <img src="kiritmb.png">
+      </div>
+      <div class="atbw">
+        <div class="option" id="atas">
+          <img src="atastmb.png">
+        </div>
+        <div class="option" id="bawah">
+          <img src="bawahtmb.png">
+        </div>
+      </div>
+      <div class="option" id="kanan">
+        <img src="kanantmb.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id ="page2"class="container-fluid">
+  <!-- Area atas sampe garis item -->
+    <div class="kotakatas">
+      <img src="ada.png">
+      <p>UMNGotcha</p>
+    </div>
+  <!-- Area bawah dari garis item sampe bawah -->
+  <div class="kotakbawah">
+      <div class="kotakstatus">
+          <div class="areaatas">
+              <div class="icondanbar">
+                  <img class="icon" id="eat" src="eat.png">
+                  <div id="barmakan" class="bar">
+                      <div id="myBar" style="height: 27px; width : 100%; background-color: grey; "></div>
+                  </div>
+              </div>
+              <div class="icondanbar">
+                  <img class="icon" id="kasur" src="kasur.png">
+                  <div id="bartidur" class="bar">
+                      <div id="myBar1" style="height: 27px; width : 100%; background-color: grey; "></div>
+                  </div>
+              </div>
+          </div>
+          <div class="areabawah">
+              <div class="icondanbar">
+                  <img class="icon" id="game" src="game.png">
+                  <div id="bargame" class="bar">
+                      <div id="myBar2" style="height: 27px; width : 100%; background-color: grey; "></div>
+                  </div>
+              </div>
+              <div class="icondanbar">
+                  <img class="icon" id="obat" src="obat.png">
+                  <div id="barobat" class="bar">
+                      <div id="myBar3" style="height: 27px; width : 100%; background-color: grey; "></div>
+                  </div>
+              </div>
+          </div>
+          <div class="level"><p id="aa"></p></div>   
+      </div>
+  <!-- BATAS KOTAKSTATUS -->
+
+  <p id="greeting"></p>
+  <p id="output"></p>
+  <div id = "jam">
+    <p id = "jam1">0</p>
+    <p id = jam2>0</p>
+    <p> :</p>
+    <p id = "menit1">0  </p>
+    <p id = menit2>0</p>
+  </div>
+  <div  style="display: flex; flex-direction: row;">
+    <div class="kotak2">
+      <button id="playButton" style="height: 67px;">Play Music</button>
+      <audio id="audio" src="buildup.wav" autoplay loop></audio>
+    </div>
+  <div>
+    <button id="bonusgame">GAME TAMBAHAN</button>
+  </div>
+  </div>
+
+<div id="activepng">
+  <img id ="active" src="sakit.png" alt="" style="width: 500px;">
+</div>
+
+<div id="kotakboost">
+  <div id="boost">
+     <button id="boostbutton1" class ="boostbutton" onclick="buttonClick()">MAKAN</button>
+     <audio id="audio1" src="eat.wav" ></audio>
+     <button id="boostbutton2" class ="boostbutton" onclick="buttonClick1()">TIDUR</button>
+     <audio id="audio2" class ="boostbutton" src="tidur.mp3" ></audio>
+  </div>
+  <div id ="boost1">
+    <button id="boostbutton3" class ="boostbutton" onclick="buttonClick2()">MAIN</button>
+    <audio id="audio4" class ="boostbutton" src="main.mp3" ></audio>
+    <button id="boostbutton4" class ="boostbutton" onclick="buttonClick3()">OBAT</button>
+    <audio id="audio3" class ="boostbutton" src="obat.wav" ></audio>
+  </div>
+</div>
+</div>
+</div>
+<audio src="audio/Pop.mp3" id="pop"></audio>
+
+<!-- Script Javascript -->
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+
+$(document).ready(function() {
+  $('.button').click(function(){
+ var nama = $('#fname').val();
+ console.log(nama);
+ const outputElement = document.getElementById("output");
+const value = nama  ;
+outputElement.innerHTML =  value;
+  });
+  let count1= 0;
+  let count2 =0;
+  let count3=0;
+  let count4 =0;
+  let level =1;
+  const day ="GOOD MORNING"
+  var img1 = document.getElementById("active");
+  const greeting = document.getElementById("greeting");
+  var color1 = document.getElementById("greeting");
+  var color2 = document.getElementById("output");
+  var color3 = document.getElementById("jam");
+  const countDisplaydetik2 = document.getElementById("menit2");
+  const countDisplaydetik1 = document.getElementById("menit1");
+  const countDisplayjam2 = document.getElementById("jam2");
+  const countDisplayjam1 = document.getElementById("jam1");
+  const countDisplaylevel = document.getElementById("aa");
+  countDisplaylevel.textContent = "LEVEL " + level;
+    function incrementCount() {
+      count1++;
+      countDisplaydetik2.textContent = count1;
+      if (count4 ==0){
+        greeting.textContent = " Good morning";
+        document.body.style.backgroundImage = "url('pagi.png')";
+
+        color1.style.color = "black";
+        color2.style.color ="black ";
+        color3.style.color = "black";
+}
+else if (count4 ==1 && count3 <=8){
+  greeting.textContent = " Good evening";
+  document.body.style.backgroundImage = "url('sore.png')";
+}
+else {
+  greeting.textContent = "Good night";
+  document.body.style.backgroundImage = "url('malem.png')";
+ 
+       color1.style.color = "white";
+        color2.style.color =" white";
+        color3.style.color =" white";
+}
+    
+      if (count1 >= 10 ){
+       count1 =0;
+       countDisplaydetik2.textContent = count1;
+      count2++;
+      countDisplaydetik1.textContent = count2;
+      }
+      if (count2 >= 6 ){
+       count2 =0;
+       countDisplaydetik1.textContent = count2;
+      count3++;
+      countDisplayjam2.textContent = count3;
+      }
+      if (count3 >= 10 ){
+       count3 =0;
+       countDisplayjam2.textContent = count3;
+      count4++;
+      countDisplayjam1.textContent = count4;
+      }
+      if (count3>=4){
+        if (count4 >=2){
+            count1 =0;
+            count2=0;
+            count3=0;
+            count4=0;
+            level++;
+            countDisplayjam1.textContent = count4;
+            countDisplayjam2.textContent = count3;
+            countDisplaydetik1.textContent = count2;
+            countDisplaydetik2.textContent = count1;
+            countDisplaylevel.textContent = "LEVEL " + level;
+           if (level == 1){
+            img1.src = "sakit.png";
+           }
+           if (level == 2){
+            img1.src = "sakit1.png";
+           }
+           if (level >=3){
+            img1.src= "sakit2.png";
+           }
+        }
+      }    
+  }
+    setInterval(incrementCount, 1000);
+
+ document.getElementById("page2").style.display ="none";
+ document.getElementById("activepng").style.display ="none";
+ document.getElementById("boost").style.display ="none";
+ document.getElementById("boost1").style.display ="none";
+ document.getElementById("gamepage").style.display ="none";
+ document.getElementById("bonus").style.display="none";
+  const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let slideIndex = 0;
+
+function showSlide(index) {
+  if (index < 0) {
+    slideIndex = slides.length - 1;
+  } else if (index >= slides.length) {
+    slideIndex = 0;
+  }
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[slideIndex].classList.add('active');
+}
+
+function prevSlide() {
+  slideIndex--;
+  showSlide(slideIndex);
+}
+
+function nextSlide() {
+  slideIndex++;
+  showSlide(slideIndex);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+showSlide(slideIndex);
+
+document.getElementById("center").onclick = function() {
+            document.getElementById("slideshow").style.display = "none";
+            document.getElementById("center").style.display="none";
+            document.getElementById("fname").style.display="none";
+            document.getElementById("page1").style.display="none";
+            document.getElementById("page2").style.display ="";
+            document.getElementById("fname").style.display="none";            
+            document.getElementById("center").style.display="none";
+            document.getElementById("activepng").style.display ="";
+            document.getElementById("boost").style.display ="";
+            document.getElementById("boost1").style.display ="";
+           
+}
+document.getElementById("bonusgame").onclick = function() {
+  document.getElementById("slideshow").style.display = "none";
+            document.getElementById("center").style.display="none";
+            document.getElementById("fname").style.display="none";
+            document.getElementById("page1").style.display="none";
+            document.getElementById("page2").style.display ="none";
+            document.getElementById("fname").style.display="none";            
+            document.getElementById("center").style.display="none";
+            document.getElementById("activepng").style.display ="none";
+            document.getElementById("boost").style.display ="none";
+            document.getElementById("boost1").style.display ="none";
+            document.getElementById("bonus").style.display="";
+}
+});
+
+// function makan
+let count = 100; 
+var img = document.getElementById("active");
+    let intervalId = setInterval(function() {
+      count = count - 0.04; 
+  
+      let barElement = document.getElementById("myBar");
+    barElement.style.width = count + "%";
+      if (count < 0) {
+        clearInterval(intervalId); 
+        window.alert("PET KAMU MATI");
+      }
+    }, 100);
+    var i = 0;
+        function buttonClick() {
+          
+img.src = "Lion_Eat.png";
+setTimeout(function() {
+
+img.src = "sakit.png";
+}, 5000);
+            if (count <= 100){
+            document.getElementById('inc').value = count =count +1;    
+        }
+    }
+
+    // function tidur
+    let count1 = 100; 
+    let intervalId1 = setInterval(function() {
+      count1= count1 - 0.01; 
+      let barElement = document.getElementById("myBar1");
+      barElement.style.width = count1 + "%";
+      if (count1 < 0) {
+        clearInterval(intervalId1); 
+        window.alert("PET KAMU MATI");
+      }
+    }, 100);
+    var i1= 0;
+    function buttonClick1() {
+      img.src = "Lion_Sleep.png";
+      setTimeout(function() {
+        img.src = "sakit.png";
+      }, 3000);
+      if (count1 <= 100){
+        document.getElementById('inc').value = count1 =count1 +1;
+      }
+    }
+
+    // Function GAME 
+    let count2 = 100; 
+        let intervalId2 = setInterval(function() {
+          count2= count2 - 0.01; 
+        
+          let barElement = document.getElementById("myBar2");
+        barElement.style.width = count2 + "%";
+          if (count2 < 0) {
+            clearInterval(intervalId1); 
+            window.alert("PET KAMU MATI");
+          }
+        }, 100);
+        var i2= 0;
+        var ktop, kleft, kwidth, kheight, ftop, fleft, fheight, fwidth;
+		var karakter = document.getElementsByClassName('kucing')[0];
+		var star = document.getElementById("star");
+		var atas = document.getElementById('atas');
+		var kiri = document.getElementById('kiri');
+		var kanan = document.getElementById('kanan');
+		var bawah = document.getElementById('bawah');
+		var timer;
+		var direction = 'right';
+
+		// Ini fungsi untuk memunculkan objek random //
+		function randomPos() {
+ 		var posX = Math.floor(Math.random() * window.innerWidth-100);
+    	var posY = Math.floor(Math.random() * window.innerHeight-100);
+		posX = Math.max(posX, 0); 
+    	posY = Math.max(posY, 0); 
+    	posX = Math.min(posX, 700);
+    	posY = Math.min(posY, 400);
+    	return [posX, posY];
+		}
+
+		// Ini fungsi untuk munculin bintang
+		function createStar() {
+    	var pos = randomPos();
+    	star.style.top = pos[1] + 'px';
+    	star.style.left = pos[0] + 'px';
+    	document.querySelector('.kotak').appendChild(star);
+		}
+
+		// Ini fungsi untuk munculin bintang lagi secara random
+		function moveStar() {
+ 	   	var pos = randomPos();
+    	star.style.top = pos[1] + 'px';
+    	star.style.left = pos[0] + 'px';
+    	document.querySelector('.kotak').appendChild(star);
+		}
+
+		//ini agar baru awal langsung muncul bintang randomnya//
+		window.onload = function() {
+ 	   	createStar();
+		}
+
+		//ini fungsi untuk mengecek singa terkena bintang atau tidak
+		function cekmakan(){
+			ktop=karakter.offsetTop;
+			kleft=karakter.offsetLeft;
+			kwidth=karakter.offsetWidth;
+			kheight=karakter.offsetHeight;
+
+			ftop=star.offsetTop;
+			fleft=k=star.offsetLeft;
+			fwidth=star.offsetWidth;
+			fheight=star.offsetHeight;
+
+			if((kleft+kwidth)>fleft && kleft<(fleft+fwidth) && (ktop+kheight) > ftop && ktop<(ftop+fheight)){
+        document.getElementById("slideshow").style.display = "none";
+            document.getElementById("center").style.display="none";
+            document.getElementById("fname").style.display="none";
+            document.getElementById("page1").style.display="none";
+            document.getElementById("page2").style.display ="";
+            document.getElementById("fname").style.display="none";            
+            document.getElementById("center").style.display="none";
+            document.getElementById("activepng").style.display ="";
+            document.getElementById("boost").style.display ="";
+            document.getElementById("boost1").style.display ="";
+            document.getElementById("gamepage").style.display="none";
+				document.querySelector('.kotak').removeChild(star);
+				setTimeout(function() {
+            	moveStar();
+			}, 1000);
+		}
+	}
+
+		//Ini buat controll saat klik image
+		atas.addEventListener('mousedown', function() {
+			karakter.style.animation = 'atas 1s steps(3) infinite';
+			direction = 'up'; 
+			animasijalan();
+			cekmakan();
+		});
+	
+		kiri.addEventListener('mousedown', function() {
+			karakter.style.animation = 'kiri 1s steps(3) infinite';
+			direction = 'left'; 
+			animasijalan();
+			cekmakan();
+		});
+	
+		kanan.addEventListener('mousedown', function() {
+			karakter.style.animation = 'kanan 1s steps(3) infinite';
+			direction = 'right'; 
+			animasijalan();
+			cekmakan();
+		});
+	
+		bawah.addEventListener('mousedown', function() {
+			karakter.style.animation = 'bawah 1s steps(3) infinite';
+			direction = 'down'; 
+			animasijalan();
+			cekmakan();
+		});
+	
+		//ini kalo dia gk klik mouse langsung berhenti Singanya
+		document.addEventListener('mouseup', function() {
+			karakter.style.animationPlayState = 'paused';
+			stopInterval();
+		});
+		function stopInterval() {
+			clearInterval(timer);
+		}
+	
+		//fungsi animasi gerak antar pixel, dan buat ngasih tau batas dia gerak antar pixel
+		function animasijalan() {
+			clearInterval(timer);
+    		timer = setInterval(function() {
+				if (direction === 'up' && karakter.offsetTop > 0) {
+					karakter.style.top = (karakter.offsetTop - 3) + "px";
+				}  else if (direction === 'left' && karakter.offsetLeft > 0) {
+            		karakter.style.left = (karakter.offsetLeft - 3) + "px";
+        		} else if (direction === 'right' && karakter.offsetLeft < (1000 - karakter.offsetWidth)) {
+    				karakter.style.left = (karakter.offsetLeft + 3) + "px";
+        		} else if (direction === 'down' && karakter.offsetTop < (600 - karakter.offsetHeight)) {
+            		karakter.style.top = (karakter.offsetTop + 3) + "px";
+        		}
+			if (star.offsetTop >= 0 && star.offsetLeft >= 0 && star.offsetTop <= (500 - star.offsetHeight) && star.offsetLeft <= (800 - star.offsetWidth)){
+            cekmakan();
+        	}
+    	}, 20);
+	}		
+            function buttonClick2() {
+              ;
+                if (count2 <= 100){
+                  document.getElementById("gamepage").style.display ="";
+                  document.getElementById("page2").style.display ="none";
+                  document.getElementById("activepng").style.display ="none";
+
+                document.getElementById('inc').value = count2 =count2 +1;
+            }
+        }
+        // function obat
+    let count3 = 100; 
+        
+        let intervalId3 = setInterval(function() {
+          count3= count3 - 0.04; 
+        
+          let barElement = document.getElementById("myBar3");
+        barElement.style.width = count3 + "%";
+          if (count3 <=0 )  {
+            clearInterval(intervalId2); 
+            window.alert("PET KAMU MATI");
+          }
+        }, 100);
+        var i3= 0;
+            function buttonClick3() {
+              img.src = "Lion_Medic.png";
+setTimeout(function() {
+img.src = "sakit.png";
+}, 3000);
+                if (count3 <= 100){
+                document.getElementById('inc').value = count3 =count3 +3;
+            }
+        }
+
+        var audio = document.getElementById("audio");
+  var playButton = document.getElementById("playButton");
+  var isLooping = true;
+  var counter =0;     
+  playButton.addEventListener("click", function() {
+  counter++;
+  if(counter % 2 == 1){
+    audio.play();
+  }
+  else{
+    audio.pause();
+  }
+   
+  });
+  var playButtonmakan = document.getElementById("boostbutton1");
+  playButtonmakan.addEventListener("click", function() {
+   
+   audio1.play();
+  
+ });
+ var playButtontidur = document.getElementById("boostbutton2");
+  playButtontidur.addEventListener("click", function() {
+   
+   audio2.play();
+  
+ });
+ var playButtonobat = document.getElementById("boostbutton4");
+  playButtonobat.addEventListener("click", function() {
+   
+   audio3.play();
+  
+ });
+ var playButtonmain = document.getElementById("boostbutton3");
+  playButtonmain.addEventListener("click", function() {
+   
+   audio4.play();
+
+ });
+</script>
+</body>
+</html>

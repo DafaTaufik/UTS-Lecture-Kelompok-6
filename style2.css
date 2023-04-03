@@ -1,0 +1,122 @@
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    display:block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+.kotakatas img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 80px;
+}
+.kotakatas{
+    margin-top: 20px;
+    height: 136px;
+    border-bottom: 4px solid black;
+    margin-bottom: 2px;
+    text-align: center;
+    font-family:  "Lucida Console", "Courier New", monospace; 
+    font-weight: 900;
+    font-size: 18px;
+}
+.kotakbawah{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kotakbawah h3{
+    margin-top: 2%;
+    font-family: monospace;
+    font-weight: bold;
+}
+.kotakstatus{
+    display:block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    border: 3px solid black;
+    height: 170px;
+    width: 550px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.areaatas{
+    height: 70px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.areabawah{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+.icondanbar{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+}
+.icon{
+    margin-right: 5px;
+    width: 40px;
+}
+.bar{
+    border: 3px solid black;
+    height: 27px;
+    width: 190px;
+    
+    border-style : solid;
+}
+#eat{
+    height:50px;
+    margin-bottom: 10px;
+}
+#game{
+    margin-bottom: 10px;
+}
+#kasur{
+    margin-right: 10px;
+    margin-bottom: 24px;
+}
+#obat{
+    margin-bottom: 20px;
+}
+.level{
+    font-weight: bolder;
+    font-size: 23px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 235px;
+    width: 150px;
+    height: 35px;
+    display: block;
+}
+#jam{
+display : flex;
+flex-direction: row;
+
+
+}
+#activepng{
+
+margin-top: 50px;
+
+}
+#kotakboost{
+
+align-items: center;
+}
+
